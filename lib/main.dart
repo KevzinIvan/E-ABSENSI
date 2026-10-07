@@ -1,4 +1,5 @@
 import 'package:eabsensi/login.dart';
+import 'package:eabsensi/myhomepage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widget_previews.dart';
 
@@ -35,6 +36,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 248, 247, 249)),
       ),
       home: const login(),
+      routes: {
+        //untuk navigasi, jika /login maka akan masuk ke menu login, /home maka akan masuk ke menu myhomepage
+        '/login': (context) => const login(),
+        '/home': (context) => const myhome(),
+      },
     );
   }
 }

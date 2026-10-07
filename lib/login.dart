@@ -28,7 +28,7 @@ class _loginState extends State<login> {
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: Column(
             children: [
-              // gambar logo
+              // gambar buat logo
               Center(
                   child: Image.asset('assets/images/images.png',
                   height: 150,
@@ -56,6 +56,7 @@ class _loginState extends State<login> {
                             inputNama.text = values;
                           },
                         ),
+                        //kontroller untuk input password
                         SizedBox(height: 16),
                         TextField(
                           decoration: InputDecoration(
@@ -86,6 +87,15 @@ class _loginState extends State<login> {
                         }
                         if (inputNama.text.trim().isEmpty ||
                             inputPassword.text.trim().isEmpty) {
+                          return;
+                        }
+                        // kalau user admin, password 12345, nanti masuk ke myhomepage
+                        if (inputNama.text.trim() == 'admin' &&
+                            inputPassword.text.trim() == '12345') {
+                          print('login berhasil');
+                          Navigator.pushReplacementNamed(context, '/home');
+                        } else {
+                          print('login gagal');
                           return;
                         }
                         // tampilkan user dan password di terminal

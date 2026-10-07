@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class login extends StatefulWidget {
-    const login({super.key});
+class myhome extends StatefulWidget {
+    const myhome({super.key});
 
     @override
-  _loginState createState() => _loginState();
+  _myhomeState createState() => _myhomeState();
 }
 
-class _loginState extends State<login> {
+class _myhomeState extends State<myhome> {
     TextEditingController inputNama = TextEditingController();
     @override
   Widget build(BuildContext context) {
