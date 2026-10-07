@@ -28,6 +28,7 @@ class _loginState extends State<login> {
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         body: Column(
             children: [
+              // gambar logo
               Center(
                   child: Image.asset('assets/images/images.png',
                   height: 150,
@@ -76,6 +77,7 @@ class _loginState extends State<login> {
                 ElevatedButton(
                     child: Text('Login'),
                     onPressed: (){
+                      //user sama password gaboleh kosong
                         if (inputNama.text.trim().isEmpty) {
                           print('user tidak boleh kosong');
                         }
@@ -86,6 +88,7 @@ class _loginState extends State<login> {
                             inputPassword.text.trim().isEmpty) {
                           return;
                         }
+                        // tampilkan user dan password di terminal
                         print('username: ${inputNama.text}');
                         print('password: ${inputPassword.text}');
                     },
